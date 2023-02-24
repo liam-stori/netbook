@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\UpdateComment\" />
+    <Folder Include="Commands\UpdateUser\" />
+    <Folder Include="Commands\UpdatePublication\" />
+    <Folder Include="Queries\GetUserById\" />
+    <Folder Include="Queries\GetPublicationById\" />
+    <Folder Include="Queries\GetCommentById\" />
+    <Folder Include="Queries\GetAllPublication\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotBook.Core\DotBook.Core.csproj" />
+    <ProjectReference Include="..\DotBook.Infrastructure\DotBook.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

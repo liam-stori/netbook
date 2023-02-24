@@ -1,0 +1,17 @@
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\bin\Debug\net6.0\DotBook.Infrastructure.deps.json
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\bin\Debug\net6.0\DotBook.Infrastructure.dll
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\bin\Debug\net6.0\DotBook.Infrastructure.pdb
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\obj\Debug\net6.0\DotBook.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\obj\Debug\net6.0\DotBook.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\obj\Debug\net6.0\DotBook.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\obj\Debug\net6.0\DotBook.Infrastructure.AssemblyInfo.cs
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\obj\Debug\net6.0\DotBook.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\obj\Debug\net6.0\DotBook.Infrastructure.dll
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\obj\Debug\net6.0\refint\DotBook.Infrastructure.dll
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\obj\Debug\net6.0\DotBook.Infrastructure.pdb
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\obj\Debug\net6.0\ref\DotBook.Infrastructure.dll
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\bin\Debug\net6.0\DotBook.Core.dll
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\bin\Debug\net6.0\DotBook.Core.pdb
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\obj\Debug\net6.0\DotBook.Infrastructure.csproj.CopyComplete
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\bin\Debug\net6.0\DotBook.Infrastructure.runtimeconfig.json
+C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Infrastructure\obj\Debug\net6.0\DotBook.Infrastructure.genruntimeconfig.cache

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "x/qbbxyhCMYrw2/1uvQ4XOqyPbxTh+xf4SF73ovvYkA=",
+  "Source": "DotBook.API",
+  "BasePath": "_content/DotBook.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
