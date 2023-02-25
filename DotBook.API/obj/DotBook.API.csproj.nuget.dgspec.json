@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.API\\DotBook.API.csproj": {}
+    "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.API\\DotBook.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.API\\DotBook.API.csproj": {
+    "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.API\\DotBook.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.API\\DotBook.API.csproj",
+        "projectUniqueName": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.API\\DotBook.API.csproj",
         "projectName": "DotBook.API",
-        "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.API\\DotBook.API.csproj",
+        "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.API\\DotBook.API.csproj",
         "packagesPath": "C:\\Users\\Liam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.API\\obj\\",
+        "outputPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Liam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,14 +28,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Application\\DotBook.Application.csproj": {
-                "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Application\\DotBook.Application.csproj"
+              "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Application\\DotBook.Application.csproj": {
+                "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Application\\DotBook.Application.csproj"
               },
-              "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {
-                "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Core\\DotBook.Core.csproj"
+              "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {
+                "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj"
               },
-              "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj"
+              "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj"
               }
             }
           }
@@ -63,6 +63,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -84,18 +88,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Application\\DotBook.Application.csproj": {
+    "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Application\\DotBook.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Application\\DotBook.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Application\\DotBook.Application.csproj",
         "projectName": "DotBook.Application",
-        "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Application\\DotBook.Application.csproj",
+        "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Application\\DotBook.Application.csproj",
         "packagesPath": "C:\\Users\\Liam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Application\\obj\\",
+        "outputPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Liam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -112,11 +116,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {
-                "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Core\\DotBook.Core.csproj"
+              "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {
+                "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj"
               },
-              "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj"
+              "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj"
               }
             }
           }
@@ -156,18 +160,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {
+    "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Core\\DotBook.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj",
         "projectName": "DotBook.Core",
-        "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Core\\DotBook.Core.csproj",
+        "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj",
         "packagesPath": "C:\\Users\\Liam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Core\\obj\\",
+        "outputPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Liam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -211,18 +215,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj": {
+    "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj",
         "projectName": "DotBook.Infrastructure",
-        "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Liam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Liam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -239,8 +243,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {
-                "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Core\\DotBook.Core.csproj"
+              "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {
+                "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj"
               }
             }
           }
@@ -286,7 +290,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

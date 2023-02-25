@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "x/qbbxyhCMYrw2/1uvQ4XOqyPbxTh+xf4SF73ovvYkA=",
+  "Hash": "BOLCnRFdhnoeWQQv4WOXSLPlwAiW/NqfclHzZcIFXyo=",
   "Source": "DotBook.API",
   "BasePath": "_content/DotBook.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "DotBook.API\\wwwroot",
+      "Source": "DotBook.API",
+      "ContentRoot": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.API\\wwwroot\\",
+      "BasePath": "_content/DotBook.API",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

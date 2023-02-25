@@ -1,4 +1,5 @@
-﻿using DotBook.Core.Entities;
+﻿using DotBook.Core.DTOs;
+using DotBook.Core.Entities;
 using DotBook.Core.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,11 +23,11 @@ namespace DotBook.Infrastructure.Persistance.Repositories
         {
             return await _dbContext.Publications.ToListAsync();
         }
-        public async Task<List<PublicationComment>> GetAllCommentsAsync(Publication publication)
+        public async Task<List<PublicationCommentDTO>> GetAllCommentsAsync(Publication publication)
         {
             return await _dbContext.PublicationsComment
-                .Where(p => p.IdPublication == publication.Id)
-                .Select(p => p.Publication.Comments)
+                .Where(p => p.Id == publication.Id)
+                .Select(p => new PublicationCommentDTO(p.Id, p.IdUser, p.Id, p.Content, p.CreatedAt))
                 .ToListAsync();
         }
 
@@ -43,6 +44,6 @@ namespace DotBook.Infrastructure.Persistance.Repositories
         public async Task SaveChangesAsync()
         {
             await _dbContext.SaveChangesAsync();
-        }        
+        }                
     }
 }

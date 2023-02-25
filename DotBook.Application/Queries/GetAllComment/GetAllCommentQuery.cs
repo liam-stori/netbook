@@ -1,14 +1,9 @@
-﻿using DotBook.Application.ViewModels;
+﻿using DotBook.Core.DTOs;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DotBook.Application.Queries.GetAllComment
 {
-    public class GetAllCommentQuery : IRequest<List<CommentViewModel>>
+    public class GetAllCommentQuery : IRequest<List<PublicationCommentDTO>>
     {
         public GetAllCommentQuery(int idPublication)
         {

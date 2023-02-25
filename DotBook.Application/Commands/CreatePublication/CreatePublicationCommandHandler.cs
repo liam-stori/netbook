@@ -14,7 +14,7 @@ namespace DotBook.Application.Commands.CreatePublication
 
         public async Task<int> Handle(CreatePublicationCommand request, CancellationToken cancellationToken)
         {
-            var publication = new Publication(request.Content, DateTime.Now, request.IdUser);
+            var publication = new Publication(request.Content, request.IdUser);
 
             await _publicationRepository.AddAsync(publication);
 

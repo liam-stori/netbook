@@ -7,13 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewModels\CommentViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Commands\UpdateComment\" />
     <Folder Include="Commands\UpdateUser\" />
     <Folder Include="Commands\UpdatePublication\" />
-    <Folder Include="Queries\GetUserById\" />
-    <Folder Include="Queries\GetPublicationById\" />
-    <Folder Include="Queries\GetCommentById\" />
-    <Folder Include="Queries\GetAllPublication\" />
   </ItemGroup>
 
   <ItemGroup>

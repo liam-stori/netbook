@@ -3351,11 +3351,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Application\\DotBook.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Application\\DotBook.Application.csproj",
       "projectName": "DotBook.Application",
-      "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Application\\DotBook.Application.csproj",
+      "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Application\\DotBook.Application.csproj",
       "packagesPath": "C:\\Users\\Liam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Application\\obj\\",
+      "outputPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Liam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3372,11 +3372,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {
-              "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Core\\DotBook.Core.csproj"
+            "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {
+              "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj"
             },
-            "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj"
+            "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj"
             }
           }
         }
@@ -3416,7 +3416,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

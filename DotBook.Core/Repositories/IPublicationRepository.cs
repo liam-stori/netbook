@@ -1,4 +1,5 @@
-﻿using DotBook.Core.Entities;
+﻿using DotBook.Core.DTOs;
+using DotBook.Core.Entities;
 
 namespace DotBook.Core.Repositories
 {
@@ -6,7 +7,7 @@ namespace DotBook.Core.Repositories
     {
         Task<Publication> GetByIdAsync(int id);
         Task<List<Publication>> GetAllAsync();
-        Task<List<PublicationComment>> GetAllCommentsAsync(Publication publication);
+        Task<List<PublicationCommentDTO>> GetAllCommentsAsync(Publication publication);
         Task AddAsync(Publication publication);
         Task AddCommentAsync(PublicationComment publicationComment);
         Task SaveChangesAsync();

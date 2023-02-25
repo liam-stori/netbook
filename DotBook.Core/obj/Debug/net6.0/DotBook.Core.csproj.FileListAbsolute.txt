@@ -10,3 +10,15 @@ C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Core\obj\Debug\net6.0\DotBook.
 C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Core\obj\Debug\net6.0\refint\DotBook.Core.dll
 C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Core\obj\Debug\net6.0\DotBook.Core.pdb
 C:\Users\Liam\Documents\DevFreela\DotBook\DotBook.Core\obj\Debug\net6.0\ref\DotBook.Core.dll
+C:\Users\Liam\Desktop\DotBook\DotBook.Core\bin\Debug\net6.0\DotBook.Core.deps.json
+C:\Users\Liam\Desktop\DotBook\DotBook.Core\bin\Debug\net6.0\DotBook.Core.dll
+C:\Users\Liam\Desktop\DotBook\DotBook.Core\bin\Debug\net6.0\DotBook.Core.pdb
+C:\Users\Liam\Desktop\DotBook\DotBook.Core\obj\Debug\net6.0\DotBook.Core.csproj.AssemblyReference.cache
+C:\Users\Liam\Desktop\DotBook\DotBook.Core\obj\Debug\net6.0\DotBook.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Liam\Desktop\DotBook\DotBook.Core\obj\Debug\net6.0\DotBook.Core.AssemblyInfoInputs.cache
+C:\Users\Liam\Desktop\DotBook\DotBook.Core\obj\Debug\net6.0\DotBook.Core.AssemblyInfo.cs
+C:\Users\Liam\Desktop\DotBook\DotBook.Core\obj\Debug\net6.0\DotBook.Core.csproj.CoreCompileInputs.cache
+C:\Users\Liam\Desktop\DotBook\DotBook.Core\obj\Debug\net6.0\DotBook.Core.dll
+C:\Users\Liam\Desktop\DotBook\DotBook.Core\obj\Debug\net6.0\refint\DotBook.Core.dll
+C:\Users\Liam\Desktop\DotBook\DotBook.Core\obj\Debug\net6.0\DotBook.Core.pdb
+C:\Users\Liam\Desktop\DotBook\DotBook.Core\obj\Debug\net6.0\ref\DotBook.Core.dll

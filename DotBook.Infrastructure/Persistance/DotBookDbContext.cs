@@ -1,5 +1,6 @@
 ﻿using DotBook.Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace DotBook.Infrastructure.Persistance
 {
@@ -13,7 +14,7 @@ namespace DotBook.Infrastructure.Persistance
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }
 }

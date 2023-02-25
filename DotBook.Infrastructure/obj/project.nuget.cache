@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GoSYq2TcfI3x7EcPk2cWogQ4kWkuXV4mEac/xPNH8yZCgpb3kdmET/ORaVTWEjYrmwW/5eirzBwxjK/s79lnhA==",
+  "dgSpecHash": "/iGbFq+ba2DQsyEeY6/ms02WMG/pGM7jumAnCrxql4SSP69G3hv4muqlCBywWIabjN2snv14HQw7JT4AWh+uKA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Liam\\Documents\\DevFreela\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Liam\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
