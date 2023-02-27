@@ -9,6 +9,11 @@ namespace DotBook.Infrastructure.Persistance.Configurations
         public void Configure(EntityTypeBuilder<Publication> builder)
         {
             builder.HasKey(p => p.Id);
+
+            builder.HasOne(p => p.User)
+                .WithMany(p => p.Publications)
+                .HasForeignKey(p => p.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

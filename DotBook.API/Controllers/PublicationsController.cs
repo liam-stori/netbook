@@ -29,10 +29,10 @@ namespace DotBook.API.Controllers
             return Ok(publications);
         }
 
-        [HttpGet("publicationUser/{id}")]
-        public async Task<IActionResult> GetById(int idUser)
+        [HttpGet("userid")]
+        public async Task<IActionResult> GetById(int userId)
         {
-            var getAllPublicationByUserQuery = new GetAllPublicationByUserQuery(idUser);
+            var getAllPublicationByUserQuery = new GetAllPublicationByUserQuery(userId);
 
             var publicationsByUser = await _mediator.Send(getAllPublicationByUserQuery);
 
@@ -49,7 +49,7 @@ namespace DotBook.API.Controllers
             return CreatedAtAction(nameof(GetById), new { id }, command);
         }
 
-        [HttpPost("{id}/comments")]
+        [HttpPost("comments")]
         public async Task<IActionResult> PostComment([FromBody] CreateCommentCommand command)
         {
             await _mediator.Send(command);

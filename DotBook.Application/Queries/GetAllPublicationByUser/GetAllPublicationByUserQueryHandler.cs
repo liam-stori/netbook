@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace DotBook.Application.Queries.GetAllPublication
 {
-    public class GetAllPublicationByUserQueryHandler : IRequestHandler<GetAllPublicationByUserQuery, List<PublicationViewModel>>
+    public class GetAllPublicationByUserQueryHandler : IRequestHandler<GetAllPublicationByUserQuery, List<PublicationUserViewModel>>
     {
         private readonly IPublicationRepository _publicationRepository;
         public GetAllPublicationByUserQueryHandler(IPublicationRepository publicationRepository)
@@ -13,16 +13,19 @@ namespace DotBook.Application.Queries.GetAllPublication
             _publicationRepository = publicationRepository;
         }
 
-        public async Task<List<PublicationViewModel>> Handle(GetAllPublicationByUserQuery request, CancellationToken cancellationToken)
+        public async Task<List<PublicationUserViewModel>> Handle(GetAllPublicationByUserQuery request, CancellationToken cancellationToken)
         {
-            var publication = await _publicationRepository.GetAllAsync();
+            var publication = await _publicationRepository.GetAllByUserIdAsync(request.UserId);
 
-            var publicationViewModel = publication
-                .Where(p => p.IdUser == request.IdUser)
-                .Select(p => new PublicationViewModel(p.Content, p.CreatedAt, p.IdUser, p.Comments))
+            var publicationUserViewModel = publication
+                .Select(p => new PublicationUserViewModel(
+                    p.Content, 
+                    p.CreatedAt, 
+                    p.User.FirstName, 
+                    p.Comments))
                 .ToList();
 
-            return publicationViewModel;
+            return publicationUserViewModel;
         }
     }
 }

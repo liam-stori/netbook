@@ -37,13 +37,10 @@ namespace DotBook.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("IdUser")
-                        .HasColumnType("int");
-
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -68,10 +65,7 @@ namespace DotBook.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("IdUser")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PublicationId")
+                    b.Property<int>("PublicationId")
                         .HasColumnType("int");
 
                     b.Property<int>("Status")
@@ -132,22 +126,28 @@ namespace DotBook.Infrastructure.Migrations
                 {
                     b.HasOne("DotBook.Core.Entities.User", "User")
                         .WithMany("Publications")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
 
             modelBuilder.Entity("DotBook.Core.Entities.PublicationComment", b =>
                 {
-                    b.HasOne("DotBook.Core.Entities.Publication", null)
+                    b.HasOne("DotBook.Core.Entities.Publication", "Publication")
                         .WithMany("Comments")
-                        .HasForeignKey("PublicationId");
+                        .HasForeignKey("PublicationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("DotBook.Core.Entities.User", "User")
                         .WithMany("Comments")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("Publication");
 
                     b.Navigation("User");
                 });

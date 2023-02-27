@@ -3,13 +3,13 @@ using MediatR;
 
 namespace DotBook.Application.Queries.GetAllPublication
 {
-    public class GetAllPublicationByUserQuery : IRequest<List<PublicationViewModel>>
+    public class GetAllPublicationByUserQuery : IRequest<List<PublicationUserViewModel>>
     {
-        public GetAllPublicationByUserQuery(int idUser)
+        public GetAllPublicationByUserQuery(int userId)
         {
-            IdUser = idUser;
+            UserId = userId;
         }
 
-        public int IdUser { get; private set; }
+        public int UserId { get; private set; }
     }
 }

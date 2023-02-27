@@ -21,7 +21,7 @@ namespace DotBook.Application.Queries.GetPublicationById
             return new PublicationViewModel(
                 publication.Content,
                 publication.CreatedAt,
-                publication.IdUser,
+                publication.UserId,
                 publication.Comments
                 );
         }

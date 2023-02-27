@@ -7,6 +7,7 @@ namespace DotBook.Core.Repositories
     {
         Task<Publication> GetByIdAsync(int id);
         Task<List<Publication>> GetAllAsync();
+        Task<List<Publication>> GetAllByUserIdAsync(int userId);
         Task<List<PublicationCommentDTO>> GetAllCommentsAsync(Publication publication);
         Task AddAsync(Publication publication);
         Task AddCommentAsync(PublicationComment publicationComment);

@@ -20,7 +20,7 @@ namespace DotBook.Application.Queries.GetAllPublication
                 .Select(p => new PublicationViewModel(
                     p.Content,
                     p.CreatedAt,
-                    p.IdUser,
+                    p.UserId,
                     p.Comments))
                 .ToList();
 

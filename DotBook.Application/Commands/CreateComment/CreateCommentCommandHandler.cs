@@ -14,7 +14,7 @@ namespace DotBook.Application.Commands.CreateComment
 
         public async Task<Unit> Handle(CreateCommentCommand request, CancellationToken cancellationToken)
         {
-            var comment = new PublicationComment(request.Content, DateTime.Now, request.IdUser);
+            var comment = new PublicationComment(request.Content, request.UserId, request.PublicationId);
 
             await _publicationRepository.AddCommentAsync(comment);
 

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DotBook.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class inicial : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -39,8 +39,7 @@ namespace DotBook.Infrastructure.Migrations
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
-                    IdUser = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: true)
+                    UserId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -49,7 +48,8 @@ namespace DotBook.Infrastructure.Migrations
                         name: "FK_Publications_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -61,9 +61,8 @@ namespace DotBook.Infrastructure.Migrations
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
-                    IdUser = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    PublicationId = table.Column<int>(type: "int", nullable: true)
+                    PublicationId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -72,13 +71,14 @@ namespace DotBook.Infrastructure.Migrations
                         name: "FK_PublicationsComment_Publications_PublicationId",
                         column: x => x.PublicationId,
                         principalTable: "Publications",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_PublicationsComment_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(

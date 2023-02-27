@@ -15,7 +15,9 @@ namespace DotBook.Infrastructure.Persistance.Repositories
 
         public async Task<Publication> GetByIdAsync(int id)
         {
-            return await _dbContext.Publications
+            return await _dbContext
+                .Publications
+                .Include(p => p.Comments)
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
 
@@ -23,11 +25,27 @@ namespace DotBook.Infrastructure.Persistance.Repositories
         {
             return await _dbContext.Publications.ToListAsync();
         }
+
+        public async Task<List<Publication>> GetAllByUserIdAsync(int userId)
+        {
+            return await _dbContext
+                .Publications
+                .Include(p => p.User)
+                .Include(p => p.Comments)
+                .Where(p => p.UserId == userId)
+                .ToListAsync();
+        }
+
         public async Task<List<PublicationCommentDTO>> GetAllCommentsAsync(Publication publication)
         {
-            return await _dbContext.PublicationsComment
+            return await _dbContext
+                .PublicationsComment
                 .Where(p => p.Id == publication.Id)
-                .Select(p => new PublicationCommentDTO(p.Id, p.IdUser, p.Id, p.Content, p.CreatedAt))
+                .Select(p => new PublicationCommentDTO(
+                    p.Id, 
+                    p.UserId, 
+                    p.Content, 
+                    p.CreatedAt))
                 .ToListAsync();
         }
 
