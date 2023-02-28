@@ -19,7 +19,7 @@ namespace DotBook.Core.Entities
         public PublicationStatusEnum Status { get; private set; }
         public int UserId { get; private set; }
         public User User { get; private set; }
-        public List<PublicationComment> Comments { get; private set; }
+        public ICollection<PublicationComment> Comments { get; private set; }
 
         public void Disabled()
         {

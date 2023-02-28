@@ -8,17 +8,14 @@ namespace DotBook.Core.DTOs
 {
     public class PublicationCommentDTO
     {
-        public PublicationCommentDTO(int id, int idUser, string content, DateTime createdAt)
+        public PublicationCommentDTO() { }
+        public PublicationCommentDTO(string username, string content)
         {
-            Id = id;
-            IdUser = idUser;
+            Username = username;
             Content = content;
-            CreatedAt = createdAt;
         }
 
-        public int Id { get; private set; }
-        public int IdUser { get; private set; }
+        public string Username { get; private set; }
         public string Content { get; private set; }
-        public DateTime CreatedAt { get; private set; }
     }
 }

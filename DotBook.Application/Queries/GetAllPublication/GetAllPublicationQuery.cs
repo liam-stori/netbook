@@ -1,9 +1,10 @@
 ﻿using DotBook.Application.ViewModels;
+using DotBook.Core.DTOs;
 using MediatR;
 
 namespace DotBook.Application.Queries.GetAllPublication
 {
-    public class GetAllPublicationQuery : IRequest<List<PublicationViewModel>>
+    public class GetAllPublicationQuery : IRequest<List<PublicationDTO>>
     {
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DotBook.Core.Enums;
+using System.Collections.ObjectModel;
 
 namespace DotBook.Core.Entities
 {
@@ -15,8 +16,8 @@ namespace DotBook.Core.Entities
 
             Status = UserStatusEnum.Enabled;
 
-            Publications = new List<Publication>();
-            Comments = new List<PublicationComment>();
+            Publications = new Collection<Publication>();
+            Comments = new Collection<PublicationComment>();
         }
 
         public string FirstName { get; private set; }
@@ -26,8 +27,8 @@ namespace DotBook.Core.Entities
         public string Email { get; private set; }
         public string Password { get; private set; }
         public UserStatusEnum Status { get; private set; }
-        public List<Publication> Publications { get; private set; }
-        public List<PublicationComment> Comments { get; private set; }
+        public ICollection<Publication> Publications { get; private set; }
+        public ICollection<PublicationComment> Comments { get; private set; }
 
         public void DisabledAccount()
         {

@@ -1,11 +1,12 @@
 ﻿using DotBook.Application.ViewModels;
+using DotBook.Core.DTOs;
 using DotBook.Core.Repositories;
 using MediatR;
 using System.Linq;
 
 namespace DotBook.Application.Queries.GetAllPublication
 {
-    public class GetAllPublicationByUserQueryHandler : IRequestHandler<GetAllPublicationByUserQuery, List<PublicationUserViewModel>>
+    public class GetAllPublicationByUserQueryHandler : IRequestHandler<GetAllPublicationByUserQuery, IEnumerable<PublicationDTO>>
     {
         private readonly IPublicationRepository _publicationRepository;
         public GetAllPublicationByUserQueryHandler(IPublicationRepository publicationRepository)
@@ -13,19 +14,11 @@ namespace DotBook.Application.Queries.GetAllPublication
             _publicationRepository = publicationRepository;
         }
 
-        public async Task<List<PublicationUserViewModel>> Handle(GetAllPublicationByUserQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<PublicationDTO>> Handle(GetAllPublicationByUserQuery request, CancellationToken cancellationToken)
         {
-            var publication = await _publicationRepository.GetAllByUserIdAsync(request.UserId);
+            var publications = await _publicationRepository.GetAllByUserIdAsync(request.UserId);
 
-            var publicationUserViewModel = publication
-                .Select(p => new PublicationUserViewModel(
-                    p.Content, 
-                    p.CreatedAt, 
-                    p.User.FirstName, 
-                    p.Comments))
-                .ToList();
-
-            return publicationUserViewModel;
+            return publications;
         }
     }
 }

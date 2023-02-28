@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "GN2qLNcUqY/2zSOwOjl5mwp11+LuxvtPKgjk/GP1NIcVpfp92qcQ07ToFFZ7fjkmPW8e7qIen4yqcTo2blBLmw==",
+  "dgSpecHash": "hu25LYFtEGRWqhUViNOXuq85titduTUe37KXcG4p1mkwJUBgfS0Cq3NoTNHaU54FpYPuEJDxHHaIo7t7+/p2sA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Liam\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

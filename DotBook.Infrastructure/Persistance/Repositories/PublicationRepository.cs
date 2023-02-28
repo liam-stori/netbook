@@ -1,16 +1,21 @@
-﻿using DotBook.Core.DTOs;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using DotBook.Core.DTOs;
 using DotBook.Core.Entities;
 using DotBook.Core.Repositories;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace DotBook.Infrastructure.Persistance.Repositories
 {
     public class PublicationRepository : IPublicationRepository
     {
         private readonly DotBookDbContext _dbContext;
-        public PublicationRepository(DotBookDbContext dbContext)
+        private readonly IMapper _mapper;
+        public PublicationRepository(DotBookDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
+            _mapper = mapper;
         }
 
         public async Task<Publication> GetByIdAsync(int id)
@@ -21,18 +26,23 @@ namespace DotBook.Infrastructure.Persistance.Repositories
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task<List<Publication>> GetAllAsync()
+        public async Task<List<PublicationDTO>> GetAllAsync()
         {
-            return await _dbContext.Publications.ToListAsync();
+            return await _dbContext
+                .Publications
+                .Include(p => p.Comments)
+                .ProjectTo<PublicationDTO>(_mapper.ConfigurationProvider)
+                .ToListAsync();
         }
 
-        public async Task<List<Publication>> GetAllByUserIdAsync(int userId)
+        public async Task<List<PublicationDTO>> GetAllByUserIdAsync(int userId)
         {
             return await _dbContext
                 .Publications
                 .Include(p => p.User)
                 .Include(p => p.Comments)
                 .Where(p => p.UserId == userId)
+                .ProjectTo<PublicationDTO>(_mapper.ConfigurationProvider)
                 .ToListAsync();
         }
 
@@ -40,12 +50,9 @@ namespace DotBook.Infrastructure.Persistance.Repositories
         {
             return await _dbContext
                 .PublicationsComment
+                .Include(u => u.User)
                 .Where(p => p.Id == publication.Id)
-                .Select(p => new PublicationCommentDTO(
-                    p.Id, 
-                    p.UserId, 
-                    p.Content, 
-                    p.CreatedAt))
+                .ProjectTo<PublicationCommentDTO>(_mapper.ConfigurationProvider)
                 .ToListAsync();
         }
 

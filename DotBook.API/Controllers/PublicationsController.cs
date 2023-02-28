@@ -1,6 +1,8 @@
-﻿using DotBook.Application.Commands.CreateComment;
+﻿using AutoMapper;
+using DotBook.Application.Commands.CreateComment;
 using DotBook.Application.Commands.CreatePublication;
 using DotBook.Application.Queries.GetAllPublication;
+using DotBook.Core.DTOs;
 using DotBook.Core.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -12,9 +14,11 @@ namespace DotBook.API.Controllers
     public class PublicationsController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public PublicationsController(IMediator mediator)
+        private readonly IMapper _mapper;
+        public PublicationsController(IMediator mediator, IMapper mapper)
         {
             _mediator = mediator;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -38,6 +42,8 @@ namespace DotBook.API.Controllers
 
             if (publicationsByUser is null) return NotFound();
 
+            //var map = _mapper.Map<PublicationCommentDTO>(publicationsByUser);
+            //arrumar o mapeamento do AutoMapper
             return Ok(publicationsByUser);
         }
 

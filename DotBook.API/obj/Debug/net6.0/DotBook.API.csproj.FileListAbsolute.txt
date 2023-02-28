@@ -187,3 +187,5 @@ C:\Users\Liam\Desktop\DotBook\DotBook.API\bin\Debug\net6.0\Swashbuckle.AspNetCor
 C:\Users\Liam\Desktop\DotBook\DotBook.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Liam\Desktop\DotBook\DotBook.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Liam\Desktop\DotBook\DotBook.API\obj\Debug\net6.0\DotBook.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Liam\Desktop\DotBook\DotBook.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Liam\Desktop\DotBook\DotBook.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
