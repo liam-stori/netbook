@@ -1,5 +1,4 @@
-﻿using DotBook.Application.ViewModels;
-using DotBook.Core.DTOs;
+﻿using DotBook.Core.DTOs;
 using MediatR;
 
 namespace DotBook.Application.Queries.GetAllPublication

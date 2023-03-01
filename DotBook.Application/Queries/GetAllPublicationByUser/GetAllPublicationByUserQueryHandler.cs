@@ -1,8 +1,6 @@
-﻿using DotBook.Application.ViewModels;
-using DotBook.Core.DTOs;
+﻿using DotBook.Core.DTOs;
 using DotBook.Core.Repositories;
 using MediatR;
-using System.Linq;
 
 namespace DotBook.Application.Queries.GetAllPublication
 {
@@ -17,6 +15,8 @@ namespace DotBook.Application.Queries.GetAllPublication
         public async Task<IEnumerable<PublicationDTO>> Handle(GetAllPublicationByUserQuery request, CancellationToken cancellationToken)
         {
             var publications = await _publicationRepository.GetAllByUserIdAsync(request.UserId);
+
+            if (publications == null) return null;
 
             return publications;
         }

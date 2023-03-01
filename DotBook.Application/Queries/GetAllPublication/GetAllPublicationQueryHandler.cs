@@ -1,5 +1,4 @@
-﻿using DotBook.Application.ViewModels;
-using DotBook.Core.DTOs;
+﻿using DotBook.Core.DTOs;
 using DotBook.Core.Repositories;
 using MediatR;
 
@@ -16,6 +15,8 @@ namespace DotBook.Application.Queries.GetAllPublication
         public async Task<List<PublicationDTO>> Handle(GetAllPublicationQuery request, CancellationToken cancellationToken)
         {
             var publication = await _publicationRepository.GetAllAsync();
+
+            if (publication == null) return null;
 
             return publication;
         }

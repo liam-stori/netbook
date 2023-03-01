@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "Ct3XlPRUchgG4owrgNkOOognvAMwwVL3poDxlCZWGaWqJNtQ8eepc9bbaeABKgCWNeS8XZvPcB3wgXt/w48W+w==",
+  "dgSpecHash": "kwnxeagbuPXwfu05hJbNlx5AodCDci/jCP+k+APJf9h84AiYnJPj6G0ukH6cqXBegDjGRlDZSGgL0vUMO0HDFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.API\\DotBook.API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Liam\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

@@ -15,6 +15,7 @@ namespace DotBook.Application.Queries.GetUserById
         public async Task<UserViewModel> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
         {
             var user = await _userRepository.GetByIdAsync(request.Id);
+
             if (user == null) return null;
             
             return new UserViewModel(user.FirstName, user.LastName, user.BirthDate, user.PhoneNumber, user.Email);

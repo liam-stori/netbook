@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -53,7 +52,7 @@ namespace DotBook.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PublicationsComment",
+                name: "Comments",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -66,15 +65,15 @@ namespace DotBook.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PublicationsComment", x => x.Id);
+                    table.PrimaryKey("PK_Comments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PublicationsComment_Publications_PublicationId",
+                        name: "FK_Comments_Publications_PublicationId",
                         column: x => x.PublicationId,
                         principalTable: "Publications",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_PublicationsComment_Users_UserId",
+                        name: "FK_Comments_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -82,18 +81,18 @@ namespace DotBook.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Publications_UserId",
-                table: "Publications",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PublicationsComment_PublicationId",
-                table: "PublicationsComment",
+                name: "IX_Comments_PublicationId",
+                table: "Comments",
                 column: "PublicationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PublicationsComment_UserId",
-                table: "PublicationsComment",
+                name: "IX_Comments_UserId",
+                table: "Comments",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Publications_UserId",
+                table: "Publications",
                 column: "UserId");
         }
 
@@ -101,7 +100,7 @@ namespace DotBook.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "PublicationsComment");
+                name: "Comments");
 
             migrationBuilder.DropTable(
                 name: "Publications");

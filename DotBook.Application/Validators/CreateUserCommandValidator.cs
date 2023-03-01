@@ -1,0 +1,44 @@
+﻿using DotBook.Application.Commands.CreateUser;
+using FluentValidation;
+using System.Text.RegularExpressions;
+
+namespace DotBook.Application.Validators
+{
+    public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
+    {
+        public CreateUserCommandValidator()
+        {
+            RuleFor(u => u.FirstName)
+                .MinimumLength(3)
+                .WithMessage("O nome deve ser informado e conter ao menos 3 caracteres!");
+
+            RuleFor(u => u.LastName)
+                .MinimumLength(3)
+                .WithMessage("O sobrenome deve ser informado e conter ao menos 3 caracteres!");
+
+            RuleFor(u => u.BirthDate)
+                .NotEmpty()
+                .NotNull()
+                .WithMessage("A data de nascimento deve ser informada!");
+
+            RuleFor(u => u.PhoneNumber)
+                .MinimumLength(10)
+                .MaximumLength(12)
+                .WithMessage("O telefone deve ser informado com DDD + telefone!");
+
+            RuleFor(u => u.Email)
+                .EmailAddress()
+                .WithMessage("O e-mail informado não é válido!");
+
+            RuleFor(u => u.Password)
+                .Must(ValidPassword)
+                .WithMessage("Senha deve conter pelo menos 8 caracteres, um número, uma letra maiúscula, uma letra minúscula e um caractere especial!");
+        }
+
+        public bool ValidPassword(string password)
+        {
+            var regex = new Regex(@"^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$");
+            return regex.IsMatch(password);
+        }
+    }
+}

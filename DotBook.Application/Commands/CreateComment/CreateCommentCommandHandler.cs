@@ -6,19 +6,19 @@ namespace DotBook.Application.Commands.CreateComment
 {
     public class CreateCommentCommandHandler : IRequestHandler<CreateCommentCommand, Unit>
     {
-        private readonly IPublicationRepository _publicationRepository;
-        public CreateCommentCommandHandler(IPublicationRepository publicationRepository)
+        private readonly ICommentRepository _commentRepository;
+        public CreateCommentCommandHandler(ICommentRepository commentRepository)
         {
-            _publicationRepository = publicationRepository;
+            _commentRepository = commentRepository;
         }
 
         public async Task<Unit> Handle(CreateCommentCommand request, CancellationToken cancellationToken)
         {
-            var comment = new PublicationComment(request.Content, request.UserId, request.PublicationId);
+            var comment = new Comment(request.Content, request.UserId, request.PublicationId);
 
-            await _publicationRepository.AddCommentAsync(comment);
+            await _commentRepository.AddAsync(comment);
 
-            await _publicationRepository.SaveChangesAsync();
+            await _commentRepository.SaveChangesAsync();
 
             return Unit.Value;
         }

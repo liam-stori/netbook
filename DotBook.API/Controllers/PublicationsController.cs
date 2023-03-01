@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
-using DotBook.Application.Commands.CreateComment;
 using DotBook.Application.Commands.CreatePublication;
+using DotBook.Application.Commands.DeletePublication;
 using DotBook.Application.Queries.GetAllPublication;
-using DotBook.Core.DTOs;
-using DotBook.Core.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -33,8 +31,8 @@ namespace DotBook.API.Controllers
             return Ok(publications);
         }
 
-        [HttpGet("userid")]
-        public async Task<IActionResult> GetById(int userId)
+        [HttpGet("{userid}")]
+        public async Task<IActionResult> GetByUserId(int userId)
         {
             var getAllPublicationByUserQuery = new GetAllPublicationByUserQuery(userId);
 
@@ -42,8 +40,6 @@ namespace DotBook.API.Controllers
 
             if (publicationsByUser is null) return NotFound();
 
-            //var map = _mapper.Map<PublicationCommentDTO>(publicationsByUser);
-            //arrumar o mapeamento do AutoMapper
             return Ok(publicationsByUser);
         }
 
@@ -52,15 +48,17 @@ namespace DotBook.API.Controllers
         {
             var id = await _mediator.Send(command);
 
-            return CreatedAtAction(nameof(GetById), new { id }, command);
+            return CreatedAtAction(nameof(GetByUserId), new { id }, command);
         }
 
-        [HttpPost("comments")]
-        public async Task<IActionResult> PostComment([FromBody] CreateCommentCommand command)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
         {
+            var command = new DeletePublicationCommand(id);
+
             await _mediator.Send(command);
 
             return NoContent();
-        }
+        }        
     }
 }

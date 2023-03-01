@@ -4,7 +4,6 @@ using DotBook.Core.DTOs;
 using DotBook.Core.Entities;
 using DotBook.Core.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace DotBook.Infrastructure.Persistance.Repositories
 {
@@ -32,6 +31,7 @@ namespace DotBook.Infrastructure.Persistance.Repositories
                 .Publications
                 .Include(p => p.Comments)
                 .ProjectTo<PublicationDTO>(_mapper.ConfigurationProvider)
+                .Where(p => p.Status == 0)
                 .ToListAsync();
         }
 
@@ -41,30 +41,28 @@ namespace DotBook.Infrastructure.Persistance.Repositories
                 .Publications
                 .Include(p => p.User)
                 .Include(p => p.Comments)
-                .Where(p => p.UserId == userId)
-                .ProjectTo<PublicationDTO>(_mapper.ConfigurationProvider)
-                .ToListAsync();
-        }
-
-        public async Task<List<PublicationCommentDTO>> GetAllCommentsAsync(Publication publication)
-        {
-            return await _dbContext
-                .PublicationsComment
-                .Include(u => u.User)
-                .Where(p => p.Id == publication.Id)
-                .ProjectTo<PublicationCommentDTO>(_mapper.ConfigurationProvider)
+                .Where(p => p.UserId == userId && p.Status == 0)
+                .Select(p => new PublicationDTO
+                {
+                    Content = p.Content,
+                    CreatedAt = p.CreatedAt,
+                    Username = p.User.FirstName,
+                    Comments = p.Comments
+                        .Where(c => c.Status == 0)
+                        .Select(c => new CommentDTO
+                        {
+                            Content = c.Content,
+                            Username = c.User.FirstName
+                        })
+                        .ToList()
+                })
                 .ToListAsync();
         }
 
         public async Task AddAsync(Publication publication) 
         {
             await _dbContext.Publications.AddAsync(publication);
-        }
-
-        public async Task AddCommentAsync(PublicationComment publicationComment)
-        {
-            await _dbContext.PublicationsComment.AddAsync(publicationComment);
-        }     
+        }    
 
         public async Task SaveChangesAsync()
         {

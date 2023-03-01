@@ -1,4 +1,6 @@
 ﻿using DotBook.Application.Commands.CreateUser;
+using DotBook.Application.Commands.DeleteUser;
+using DotBook.Application.Commands.EnableUser;
 using DotBook.Application.Commands.LoginUser;
 using DotBook.Application.Queries.GetUserById;
 using MediatR;
@@ -19,14 +21,11 @@ namespace DotBook.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var search = new GetUserByIdQuery(id);
+            var command = new GetUserByIdQuery(id);
 
-            var user = await _mediator.Send(search);
+            var user = await _mediator.Send(command);
 
-            if (user == null)
-            {
-                return NotFound();
-            }
+            if (user == null) return NotFound();           
 
             return Ok(user);
         }
@@ -47,6 +46,26 @@ namespace DotBook.API.Controllers
             if (loginUserViewModel == null) return BadRequest();
 
             return Ok(loginUserViewModel);
+        }
+
+        [HttpPut("{id}/disable")]
+        public async Task<IActionResult> Disable(int id)
+        {
+            var command = new DisableUserCommand(id);
+
+            await _mediator.Send(command);
+
+            return NoContent();
+        }
+
+        [HttpPut("{id}/enable")]
+        public async Task<IActionResult> Enable(int id)
+        {
+            var command = new EnableUserCommand(id);
+
+            await _mediator.Send(command);
+
+            return NoContent();
         }
     }
 }

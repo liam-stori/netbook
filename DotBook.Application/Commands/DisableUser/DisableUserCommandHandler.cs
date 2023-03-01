@@ -1,22 +1,17 @@
 ﻿using DotBook.Core.Repositories;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DotBook.Application.Commands.DeleteUser
 {
-    public class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommand, Unit>
+    public class DisableUserCommandHandler : IRequestHandler<DisableUserCommand, Unit>
     {
         private readonly IUserRepository _userRepository;
-        public DeleteUserCommandHandler(IUserRepository userRepository)
+        public DisableUserCommandHandler(IUserRepository userRepository)
         {
             _userRepository = userRepository;
         }
 
-        public async Task<Unit> Handle(DeleteUserCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(DisableUserCommand request, CancellationToken cancellationToken)
         {
             var user = await _userRepository.GetByIdAsync(request.Id);
 

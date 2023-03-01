@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DotBook.Infrastructure.Persistance.Configurations
 {
-    public class PublicationCommentConfiguration : IEntityTypeConfiguration<PublicationComment>
+    public class CommentConfiguration : IEntityTypeConfiguration<Comment>
     {
-        public void Configure(EntityTypeBuilder<PublicationComment> builder)
+        public void Configure(EntityTypeBuilder<Comment> builder)
         {
             builder.HasKey(p => p.Id);
 

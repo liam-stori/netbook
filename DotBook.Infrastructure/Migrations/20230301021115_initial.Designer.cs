@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotBook.Infrastructure.Migrations
 {
     [DbContext(typeof(DotBookDbContext))]
-    [Migration("20230227153912_initial")]
+    [Migration("20230301021115_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -25,35 +25,7 @@ namespace DotBook.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("DotBook.Core.Entities.Publication", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Publications");
-                });
-
-            modelBuilder.Entity("DotBook.Core.Entities.PublicationComment", b =>
+            modelBuilder.Entity("DotBook.Core.Entities.Comment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -83,7 +55,35 @@ namespace DotBook.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("PublicationsComment");
+                    b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("DotBook.Core.Entities.Publication", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Publications");
                 });
 
             modelBuilder.Entity("DotBook.Core.Entities.User", b =>
@@ -125,18 +125,7 @@ namespace DotBook.Infrastructure.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("DotBook.Core.Entities.Publication", b =>
-                {
-                    b.HasOne("DotBook.Core.Entities.User", "User")
-                        .WithMany("Publications")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("DotBook.Core.Entities.PublicationComment", b =>
+            modelBuilder.Entity("DotBook.Core.Entities.Comment", b =>
                 {
                     b.HasOne("DotBook.Core.Entities.Publication", "Publication")
                         .WithMany("Comments")
@@ -151,6 +140,17 @@ namespace DotBook.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Publication");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("DotBook.Core.Entities.Publication", b =>
+                {
+                    b.HasOne("DotBook.Core.Entities.User", "User")
+                        .WithMany("Publications")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });

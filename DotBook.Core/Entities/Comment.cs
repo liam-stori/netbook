@@ -1,11 +1,10 @@
 ﻿using DotBook.Core.Enums;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DotBook.Core.Entities
 {
-    public class PublicationComment : BaseEntity
+    public class Comment : BaseEntity
     {
-        public PublicationComment(string content, int userId, int publicationId)
+        public Comment(string content, int userId, int publicationId)
         {
             Content = content;
             UserId = userId;
@@ -22,5 +21,15 @@ namespace DotBook.Core.Entities
         public User User { get; private set; }
         public int PublicationId { get; private set; }
         public Publication Publication { get; private set; }
+
+        public void Disabled()
+        {
+            Status = PublicationCommentStatusEnum.Disable;
+        }
+
+        public void Update(string content)
+        {
+            Content = content;
+        }
     }
 }

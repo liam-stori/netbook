@@ -17,7 +17,7 @@ namespace DotBook.Core.Entities
             Status = UserStatusEnum.Enabled;
 
             Publications = new Collection<Publication>();
-            Comments = new Collection<PublicationComment>();
+            Comments = new Collection<Comment>();
         }
 
         public string FirstName { get; private set; }
@@ -28,11 +28,24 @@ namespace DotBook.Core.Entities
         public string Password { get; private set; }
         public UserStatusEnum Status { get; private set; }
         public ICollection<Publication> Publications { get; private set; }
-        public ICollection<PublicationComment> Comments { get; private set; }
+        public ICollection<Comment> Comments { get; private set; }
 
         public void DisabledAccount()
         {
             Status = UserStatusEnum.Disabled;
+        }
+
+        public void EnableAccount()
+        {
+            Status = UserStatusEnum.Enabled;
+        }
+
+        public void Update(string firstName, string lastName, DateTime birthDate, string phoneNumber)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            BirthDate = birthDate;
+            PhoneNumber = phoneNumber;
         }
     }
 }
