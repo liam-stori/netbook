@@ -3,6 +3,7 @@ using DotBook.Application.Commands.CreatePublication;
 using DotBook.Application.Commands.DeletePublication;
 using DotBook.Application.Queries.GetAllPublication;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -20,6 +21,7 @@ namespace DotBook.API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Users")]
         public async Task<IActionResult> Get()
         {
             var getAllPublicationQuery = new GetAllPublicationQuery();
@@ -31,7 +33,8 @@ namespace DotBook.API.Controllers
             return Ok(publications);
         }
 
-        [HttpGet("{userid}")]
+        [HttpGet("{userId}")]
+        [Authorize(Roles = "Users")]
         public async Task<IActionResult> GetByUserId(int userId)
         {
             var getAllPublicationByUserQuery = new GetAllPublicationByUserQuery(userId);
@@ -44,14 +47,16 @@ namespace DotBook.API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Users")]
         public async Task<IActionResult> Post([FromBody] CreatePublicationCommand command)
         {
             var id = await _mediator.Send(command);
 
-            return CreatedAtAction(nameof(GetByUserId), new { id }, command);
+            return CreatedAtAction(nameof(GetByUserId), new { userId = id }, command);
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Users")]
         public async Task<IActionResult> Delete(int id)
         {
             var command = new DeletePublicationCommand(id);

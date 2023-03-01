@@ -1,6 +1,7 @@
 ﻿using DotBook.Application.Commands.CreateComment;
 using DotBook.Application.Commands.DeleteComment;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -16,6 +17,7 @@ namespace DotBook.API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Users")]
         public async Task<IActionResult> PostComment([FromBody] CreateCommentCommand command)
         {
             await _mediator.Send(command);
@@ -24,6 +26,7 @@ namespace DotBook.API.Controllers
         }
 
         [HttpDelete("{id}/publication")]
+        [Authorize(Roles = "Users")]
         public async Task<IActionResult> DeleteComment(int id)
         {
             var command = new DeleteCommentCommand(id);

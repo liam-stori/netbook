@@ -192,3 +192,5 @@ C:\Users\Liam\Desktop\DotBook\DotBook.API\bin\Debug\net6.0\AutoMapper.Extensions
 C:\Users\Liam\Desktop\DotBook\DotBook.API\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\Liam\Desktop\DotBook\DotBook.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\Liam\Desktop\DotBook\DotBook.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Liam\Desktop\DotBook\DotBook.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Liam\Desktop\DotBook\DotBook.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll

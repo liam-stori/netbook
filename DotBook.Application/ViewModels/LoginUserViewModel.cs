@@ -2,13 +2,13 @@
 {
     public class LoginUserViewModel
     {
-        public LoginUserViewModel(string email, string password)
+        public LoginUserViewModel(string email, string token)
         {
             Email = email;
-            Password = password;
+            Token = token;
         }
 
         public string Email { get; private set; }
-        public string Password { get; private set; }
+        public string Token { get; private set; }
     }
 }

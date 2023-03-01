@@ -4,6 +4,7 @@ using DotBook.Application.Commands.EnableUser;
 using DotBook.Application.Commands.LoginUser;
 using DotBook.Application.Queries.GetUserById;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -19,6 +20,7 @@ namespace DotBook.API.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Roles = "Users")]
         public async Task<IActionResult> GetById(int id)
         {
             var command = new GetUserByIdQuery(id);
@@ -31,6 +33,7 @@ namespace DotBook.API.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Post([FromBody] CreateUserCommand command)
         {
             var id = await _mediator.Send(command);
@@ -39,6 +42,7 @@ namespace DotBook.API.Controllers
         }
 
         [HttpPut("login")]
+        [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginUserCommand command)
         {
             var loginUserViewModel = await _mediator.Send(command);
@@ -49,6 +53,7 @@ namespace DotBook.API.Controllers
         }
 
         [HttpPut("{id}/disable")]
+        [Authorize(Roles = "Users")]
         public async Task<IActionResult> Disable(int id)
         {
             var command = new DisableUserCommand(id);
@@ -59,6 +64,7 @@ namespace DotBook.API.Controllers
         }
 
         [HttpPut("{id}/enable")]
+        [AllowAnonymous]
         public async Task<IActionResult> Enable(int id)
         {
             var command = new EnableUserCommand(id);

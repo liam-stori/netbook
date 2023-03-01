@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotBook.Infrastructure.Migrations
 {
     [DbContext(typeof(DotBookDbContext))]
-    [Migration("20230301021115_initial")]
+    [Migration("20230301181707_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -114,6 +114,10 @@ namespace DotBook.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

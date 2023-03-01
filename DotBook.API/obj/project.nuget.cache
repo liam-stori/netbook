@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kwnxeagbuPXwfu05hJbNlx5AodCDci/jCP+k+APJf9h84AiYnJPj6G0ukH6cqXBegDjGRlDZSGgL0vUMO0HDFQ==",
+  "dgSpecHash": "SPkznrZYpVxiG349TmXYSeB8Uw9x+r3J/BU9WQeKeT2ISEvSg3awgdmTK5K8Q23pqPyTp8R0BqnaZ9TBOPBDlw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.API\\DotBook.API.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,8 @@
     "C:\\Users\\Liam\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.14\\microsoft.aspnetcore.authentication.jwtbearer.6.0.14.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\6.0.14\\microsoft.aspnetcore.authentication.openidconnect.6.0.14.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

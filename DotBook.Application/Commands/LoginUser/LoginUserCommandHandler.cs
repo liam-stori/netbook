@@ -1,4 +1,5 @@
-﻿using DotBook.Application.ViewModels;
+﻿using DotBook.Application.Services;
+using DotBook.Application.ViewModels;
 using DotBook.Core.Repositories;
 using MediatR;
 
@@ -7,18 +8,23 @@ namespace DotBook.Application.Commands.LoginUser
     public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUserViewModel>
     {
         private readonly IUserRepository _userRepository;
-        public LoginUserCommandHandler(IUserRepository userRepository)
+        private readonly IAuthService _authService;
+        public LoginUserCommandHandler(IUserRepository userRepository, IAuthService authService)
         {
             _userRepository = userRepository;
+            _authService = authService;
         }
 
         public async Task<LoginUserViewModel> Handle(LoginUserCommand request, CancellationToken cancellationToken)
         {
-            var user = await _userRepository.GetByEmailAndPasswordAsync(request.Email, request.Password);
+            var passwordHash = _authService.ComputeSha256Hash(request.Password);
 
+            var user = await _userRepository.GetByEmailAndPasswordAsync(request.Email, passwordHash);
             if (user == null) return null;
 
-            return new LoginUserViewModel(request.Email, request.Password);
+            var token = _authService.GenerateJwtToken(user.Email, user.Role);
+
+            return new LoginUserViewModel(request.Email, token);
         }
     }
 }

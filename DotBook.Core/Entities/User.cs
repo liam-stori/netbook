@@ -5,7 +5,7 @@ namespace DotBook.Core.Entities
 {
     public class User : BaseEntity
     {
-        public User(string firstName, string lastName, DateTime birthDate, string phoneNumber, string email, string password)
+        public User(string firstName, string lastName, DateTime birthDate, string phoneNumber, string email, string password, string role)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -13,6 +13,7 @@ namespace DotBook.Core.Entities
             PhoneNumber = phoneNumber;
             Email = email;
             Password = password;
+            Role = role;
 
             Status = UserStatusEnum.Enabled;
 
@@ -26,9 +27,16 @@ namespace DotBook.Core.Entities
         public string PhoneNumber { get; private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
+        public string Role { get; private set; }
+
+
+
         public UserStatusEnum Status { get; private set; }
         public ICollection<Publication> Publications { get; private set; }
         public ICollection<Comment> Comments { get; private set; }
+
+
+
 
         public void DisabledAccount()
         {
