@@ -1,9 +1,6 @@
-﻿using DotBook.Application.Commands.CreateUser;
-using DotBook.Application.Commands.UpdateUser;
-using DotBook.Application.Validators;
+﻿using DotBook.Application.Commands.UpdateUser;
 using DotBook.Core.Entities;
 using DotBook.Core.Repositories;
-using FluentValidation;
 using Moq;
 
 namespace DotBook.UnitTests.Application.Commands

@@ -6,6 +6,12 @@ namespace DotBook.Core.DTOs
     {
         public PublicationDTO() { }
 
+        public PublicationDTO(string content, string username)
+        {
+            Content = content;
+            Username = username;
+        }
+
         public string Content { get; set; }
         public DateTime CreatedAt { get; set; }
         public string Username { get; set; }

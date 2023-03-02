@@ -24,10 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\Queries\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\DotBook.Application\DotBook.Application.csproj" />
     <ProjectReference Include="..\DotBook.Core\DotBook.Core.csproj" />
   </ItemGroup>
