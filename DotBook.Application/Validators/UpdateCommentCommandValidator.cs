@@ -10,12 +10,12 @@ namespace DotBook.Application.Validators
             RuleFor(c => c.Id)
                 .NotEmpty()
                 .NotNull()
-                .WithMessage("É necessário informar o id do comentário!");
+                .OverridePropertyName("O id do comentário");
 
             RuleFor(c => c.Content)
                 .NotEmpty()
                 .NotNull()
-                .WithMessage("O comentário precisa ser preenchido!");
+                .OverridePropertyName("O comentário");
         }
     }
 }

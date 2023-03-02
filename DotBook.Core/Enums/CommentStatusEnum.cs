@@ -1,6 +1,6 @@
 ﻿namespace DotBook.Core.Enums
 {
-    public enum PublicationCommentStatusEnum
+    public enum CommentStatusEnum
     {
         Enable = 0,
         Disable = 1

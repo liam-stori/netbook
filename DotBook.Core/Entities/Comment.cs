@@ -11,12 +11,12 @@ namespace DotBook.Core.Entities
             PublicationId = publicationId;
 
             CreatedAt = DateTime.Now;
-            Status = PublicationCommentStatusEnum.Enable;
+            Status = CommentStatusEnum.Enable;
         }
 
         public string Content { get; private set; }
         public DateTime CreatedAt { get; private set; }
-        public PublicationCommentStatusEnum Status { get; private set; }
+        public CommentStatusEnum Status { get; private set; }
         public int UserId { get; private set; }
         public User User { get; private set; }
         public int PublicationId { get; private set; }
@@ -24,7 +24,7 @@ namespace DotBook.Core.Entities
 
         public void Disabled()
         {
-            Status = PublicationCommentStatusEnum.Disable;
+            Status = CommentStatusEnum.Disable;
         }
 
         public void Update(string content)

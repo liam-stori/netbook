@@ -10,12 +10,12 @@ namespace DotBook.Application.Validators
             RuleFor(p => p.Content)
                 .NotEmpty()
                 .NotNull()
-                .WithMessage("A publicação precisa ser preenchida!");
+                .OverridePropertyName("A publicação");
 
             RuleFor(p => p.IdUser)
                 .NotEmpty()
                 .NotNull()
-                .WithMessage("É necessário informar o id do usuário!");
+                .OverridePropertyName("O id do usuário");
         }
     }
 }
