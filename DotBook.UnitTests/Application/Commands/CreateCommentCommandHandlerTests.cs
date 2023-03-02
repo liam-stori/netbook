@@ -11,7 +11,7 @@ namespace DotBook.UnitTests.Application.Commands
     public class CreateCommentCommandHandlerTests
     {
         [Fact]
-        public async Task InputDataCommentIsOk_Executed_ReturnNone()
+        public async Task CreateDataCommentIsOk_Executed_ReturnNone()
         {
             //Arrange
             var commentRepositoryMock = new Mock<ICommentRepository>();
@@ -28,12 +28,12 @@ namespace DotBook.UnitTests.Application.Commands
             await createCommentCommandHandler.Handle(createCommentCommand, new CancellationToken());
 
             //Assert
-            commentRepositoryMock.Verify(cr => cr.AddAsync(It.IsAny<Comment>()), Times.Once());
-            commentRepositoryMock.Verify(cr => cr.SaveChangesAsync(), Times.Once());
+            commentRepositoryMock.Verify(crm => crm.AddAsync(It.IsAny<Comment>()), Times.Once);
+            commentRepositoryMock.Verify(crm => crm.SaveChangesAsync(), Times.Once);
         }
 
         [Fact]
-        public async Task InputDataCommentContentNull_Executed_ReturnValidatorMessage()
+        public async Task CreateDataCommentContentNull_Executed_ReturnValidatorMessage()
         {
             //Arrange
             var createCommentCommand = new CreateCommentCommand

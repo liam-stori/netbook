@@ -4,6 +4,8 @@ namespace DotBook.Core.Entities
 {
     public class Comment : BaseEntity
     {
+        public Comment() { }
+
         public Comment(string content, int userId, int publicationId)
         {
             Content = content;
@@ -22,7 +24,7 @@ namespace DotBook.Core.Entities
         public int PublicationId { get; private set; }
         public Publication Publication { get; private set; }
 
-        public void Disabled()
+        public virtual void Disabled()
         {
             Status = CommentStatusEnum.Disable;
         }

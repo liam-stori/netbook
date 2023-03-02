@@ -9,7 +9,7 @@ namespace DotBook.UnitTests.Application.Commands
     public class CreatePublicationCommandHandlerTests
     {
         [Fact]
-        public async Task InputDataPublicationIsOk_Executed_ReturnNone()
+        public async Task CreateDataPublicationIsOk_Executed_ReturnNone()
         {
             //Arrange
             var publicationRepositoryMock = new Mock<IPublicationRepository>();
@@ -25,12 +25,12 @@ namespace DotBook.UnitTests.Application.Commands
             await createPublicationCommandHandler.Handle(createPublicationCommand, new CancellationToken());
 
             //Assert
-            publicationRepositoryMock.Verify(pr => pr.AddAsync(It.IsAny<Publication>()), Times.Once());
-            publicationRepositoryMock.Verify(pr => pr.SaveChangesAsync(), Times.Once());
+            publicationRepositoryMock.Verify(pmr => pmr.AddAsync(It.IsAny<Publication>()), Times.Once);
+            publicationRepositoryMock.Verify(pmr => pmr.SaveChangesAsync(), Times.Once);
         }
 
         [Fact]
-        public async Task InputDataPublicationContentNull_Executed_ReturnValidatorMessage()
+        public async Task CreateDataPublicationContentNull_Executed_ReturnValidatorMessage()
         {
             //Arrange
             var createPublicationCommand = new CreatePublicationCommand

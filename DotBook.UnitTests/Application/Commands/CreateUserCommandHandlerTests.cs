@@ -10,7 +10,7 @@ namespace DotBook.UnitTests.Application.Commands
     public class CreateUserCommandHandlerTests
     {
         [Fact]
-        public async Task InputDataUserIsOk_Executed_ReturnNone()
+        public async Task CreateDataUserIsOk_Executed_ReturnNone()
         {
             //Arrange
             var userRepositoryMock = new Mock<IUserRepository>();
@@ -32,13 +32,13 @@ namespace DotBook.UnitTests.Application.Commands
             await createUserCommandHandler.Handle(createUserCommand, new CancellationToken());
 
             //Assert
-            userRepositoryMock.Verify(ur => ur.AddAsync(It.IsAny<User>()), Times.Once());
-            userRepositoryMock.Verify(ur => ur.SaveChangesAsync(), Times.Once());
-            authServiceMock.Verify(a => a.ComputeSha256Hash(createUserCommand.Password), Times.Once());
+            userRepositoryMock.Verify(umr => umr.AddAsync(It.IsAny<User>()), Times.Once);
+            userRepositoryMock.Verify(umr => umr.SaveChangesAsync(), Times.Once);
+            authServiceMock.Verify(asm => asm.ComputeSha256Hash(createUserCommand.Password), Times.Once);
         }
 
         [Fact]
-        public async Task InputDataUserFirstNameNotMinimumLength_Executed_ReturnValidatorMessage()
+        public async Task CreateDataUserFirstNameNotMinimumLength_Executed_ReturnValidatorMessage()
         {
             //Arrange
             var createUserCommand = new CreateUserCommand
@@ -62,7 +62,7 @@ namespace DotBook.UnitTests.Application.Commands
         }
 
         [Fact]
-        public async Task InputDataUserLastNameNotMinimumLength_Executed_ReturnValidatorMessage()
+        public async Task CreateDataUserLastNameNotMinimumLength_Executed_ReturnValidatorMessage()
         {
             //Arrange
             var createUserCommand = new CreateUserCommand
@@ -86,7 +86,7 @@ namespace DotBook.UnitTests.Application.Commands
         }
 
         [Fact]
-        public async Task InputDataUserPhoneNumberNotMinimumLength_Executed_ReturnValidatorMessage()
+        public async Task CreateDataUserPhoneNumberNotMinimumLength_Executed_ReturnValidatorMessage()
         {
             //Arrange
             var createUserCommand = new CreateUserCommand
@@ -112,7 +112,7 @@ namespace DotBook.UnitTests.Application.Commands
         }
 
         [Fact]
-        public async Task InputDataUserPhoneNumberNotMaximumLength_Executed_ReturnValidatorMessage()
+        public async Task CreateDataUserPhoneNumberNotMaximumLength_Executed_ReturnValidatorMessage()
         {
             //Arrange
             var createUserCommand = new CreateUserCommand
@@ -138,7 +138,7 @@ namespace DotBook.UnitTests.Application.Commands
         }
 
         [Fact]
-        public async Task InputDataUserEmailNotValid_Executed_ReturnValidatorMessage()
+        public async Task CreateDataUserEmailNotValid_Executed_ReturnValidatorMessage()
         {
             //Arrange
             var createUserCommand = new CreateUserCommand
@@ -161,7 +161,7 @@ namespace DotBook.UnitTests.Application.Commands
         }
 
         [Fact]
-        public async Task InputDataUserPasswordNotValid_Executed_ReturnValidatorMessage()
+        public async Task CreateDataUserPasswordNotValid_Executed_ReturnValidatorMessage()
         {
             //Arrange
             var createUserCommand = new CreateUserCommand
