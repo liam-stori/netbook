@@ -4288,11 +4288,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.API\\NetBook.API.csproj",
+      "projectUniqueName": "C:\\Users\\Liam\\Desktop\\Netbook\\netbook\\DotBook.API\\NetBook.API.csproj",
       "projectName": "NetBook.API",
-      "projectPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.API\\NetBook.API.csproj",
+      "projectPath": "C:\\Users\\Liam\\Desktop\\Netbook\\netbook\\DotBook.API\\NetBook.API.csproj",
       "packagesPath": "C:\\Users\\Liam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.API\\obj\\",
+      "outputPath": "C:\\Users\\Liam\\Desktop\\Netbook\\netbook\\DotBook.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Liam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4309,14 +4309,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Application\\NetBook.Application.csproj": {
-              "projectPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Application\\NetBook.Application.csproj"
+            "C:\\Users\\Liam\\Desktop\\Netbook\\netbook\\DotBook.Application\\NetBook.Application.csproj": {
+              "projectPath": "C:\\Users\\Liam\\Desktop\\Netbook\\netbook\\DotBook.Application\\NetBook.Application.csproj"
             },
-            "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\NetBook.Core.csproj": {
-              "projectPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\NetBook.Core.csproj"
+            "C:\\Users\\Liam\\Desktop\\Netbook\\netbook\\DotBook.Core\\NetBook.Core.csproj": {
+              "projectPath": "C:\\Users\\Liam\\Desktop\\Netbook\\netbook\\DotBook.Core\\NetBook.Core.csproj"
             },
-            "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Infrastructure\\NetBook.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Infrastructure\\NetBook.Infrastructure.csproj"
+            "C:\\Users\\Liam\\Desktop\\Netbook\\netbook\\DotBook.Infrastructure\\NetBook.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Liam\\Desktop\\Netbook\\netbook\\DotBook.Infrastructure\\NetBook.Infrastructure.csproj"
             }
           }
         }

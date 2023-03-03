@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pluz4rntQQfi445f3XKAA4LwLOPi4M/prUR6ZcadGtY=",
+  "Hash": "Xb84GGV8RVejlKXnecH0GiSgRx3/Ve9VTBRhUGkcmFQ=",
   "Source": "NetBook.API",
   "BasePath": "_content/NetBook.API",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "NetBook.API\\wwwroot",
       "Source": "NetBook.API",
-      "ContentRoot": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Liam\\Desktop\\Netbook\\netbook\\DotBook.API\\wwwroot\\",
       "BasePath": "_content/NetBook.API",
       "Pattern": "**"
     }
