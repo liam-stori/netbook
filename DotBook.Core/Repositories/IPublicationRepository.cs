@@ -1,7 +1,7 @@
-﻿using DotBook.Core.DTOs;
-using DotBook.Core.Entities;
+﻿using NetBook.Core.DTOs;
+using NetBook.Core.Entities;
 
-namespace DotBook.Core.Repositories
+namespace NetBook.Core.Repositories
 {
     public interface IPublicationRepository
     {

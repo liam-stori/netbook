@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace DotBook.Application.Commands.CreateComment
+namespace NetBook.Application.Commands.CreateComment
 {
     public class CreateCommentCommand : IRequest<Unit>
     {

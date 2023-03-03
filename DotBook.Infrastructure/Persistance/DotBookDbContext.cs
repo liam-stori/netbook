@@ -1,12 +1,12 @@
-﻿using DotBook.Core.Entities;
+﻿using NetBook.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
-namespace DotBook.Infrastructure.Persistance
+namespace NetBook.Infrastructure.Persistance
 {
-    public class DotBookDbContext : DbContext
+    public class NetBookDbContext : DbContext
     {
-        public DotBookDbContext(DbContextOptions<DotBookDbContext> options) : base(options) { }
+        public NetBookDbContext(DbContextOptions<NetBookDbContext> options) : base(options) { }
 
         public DbSet<Publication> Publications { get; set; }
         public DbSet<Comment> Comments { get; set; }

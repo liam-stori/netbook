@@ -1,12 +1,12 @@
-﻿using DotBook.Application.Commands.CreateComment;
-using DotBook.Application.Validators;
-using DotBook.Core.Entities;
-using DotBook.Core.Repositories;
+﻿using NetBook.Application.Commands.CreateComment;
+using NetBook.Application.Validators;
+using NetBook.Core.Entities;
+using NetBook.Core.Repositories;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 
-namespace DotBook.UnitTests.Application.Commands
+namespace NetBook.UnitTests.Application.Commands
 {
     public class CreateCommentCommandHandlerTests
     {

@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace DotBook.Application.Commands.CreateUser
+namespace NetBook.Application.Commands.CreateUser
 {
     public class CreateUserCommand : IRequest<int>
     {

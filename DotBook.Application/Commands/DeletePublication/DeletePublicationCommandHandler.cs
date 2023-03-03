@@ -1,7 +1,7 @@
-﻿using DotBook.Core.Repositories;
+﻿using NetBook.Core.Repositories;
 using MediatR;
 
-namespace DotBook.Application.Commands.DeletePublication
+namespace NetBook.Application.Commands.DeletePublication
 {
     public class DeletePublicationCommandHandler : IRequestHandler<DeletePublicationCommand, Unit>
     {

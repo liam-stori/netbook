@@ -1,7 +1,7 @@
-﻿using DotBook.Application.Commands.UpdatePublication;
+﻿using NetBook.Application.Commands.UpdatePublication;
 using FluentValidation;
 
-namespace DotBook.Application.Validators
+namespace NetBook.Application.Validators
 {
     public class UpdatePublicationCommandValidator : AbstractValidator<UpdatePublicationCommand>
     {

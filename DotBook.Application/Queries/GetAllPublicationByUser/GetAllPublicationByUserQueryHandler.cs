@@ -1,8 +1,8 @@
-﻿using DotBook.Core.DTOs;
-using DotBook.Core.Repositories;
+﻿using NetBook.Core.DTOs;
+using NetBook.Core.Repositories;
 using MediatR;
 
-namespace DotBook.Application.Queries.GetAllPublication
+namespace NetBook.Application.Queries.GetAllPublication
 {
     public class GetAllPublicationByUserQueryHandler : IRequestHandler<GetAllPublicationByUserQuery, IEnumerable<PublicationDTO>>
     {

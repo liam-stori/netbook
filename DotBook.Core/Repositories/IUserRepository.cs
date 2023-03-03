@@ -1,6 +1,6 @@
-﻿using DotBook.Core.Entities;
+﻿using NetBook.Core.Entities;
 
-namespace DotBook.Core.Repositories
+namespace NetBook.Core.Repositories
 {
     public interface IUserRepository
     {

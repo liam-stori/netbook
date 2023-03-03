@@ -8,7 +8,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "DotBook.API": {
+    "NetBook.API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

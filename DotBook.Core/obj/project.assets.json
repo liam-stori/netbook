@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj",
-      "projectName": "DotBook.Core",
-      "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\NetBook.Core.csproj",
+      "projectName": "NetBook.Core",
+      "projectPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\NetBook.Core.csproj",
       "packagesPath": "C:\\Users\\Liam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\obj\\",
+      "outputPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Liam\\AppData\\Roaming\\NuGet\\NuGet.Config",

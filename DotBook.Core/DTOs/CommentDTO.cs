@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace DotBook.Core.DTOs
+namespace NetBook.Core.DTOs
 {
     public class CommentDTO
     {

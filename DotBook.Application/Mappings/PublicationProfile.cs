@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using DotBook.Core.DTOs;
-using DotBook.Core.Entities;
+using NetBook.Core.DTOs;
+using NetBook.Core.Entities;
 
-namespace DotBook.Core.Mappings
+namespace NetBook.Core.Mappings
 {
     public class PublicationProfile : Profile
     {

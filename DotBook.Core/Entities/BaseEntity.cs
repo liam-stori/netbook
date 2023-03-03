@@ -1,4 +1,4 @@
-﻿namespace DotBook.Core.Entities
+﻿namespace NetBook.Core.Entities
 {
     public class BaseEntity
     {

@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace DotBook.Application.Commands.DeletePublication
+namespace NetBook.Application.Commands.DeletePublication
 {
     public class DeletePublicationCommand : IRequest<Unit>
     {

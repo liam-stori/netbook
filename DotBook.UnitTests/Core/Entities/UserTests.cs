@@ -1,7 +1,7 @@
-﻿using DotBook.Core.Entities;
-using DotBook.Core.Enums;
+﻿using NetBook.Core.Entities;
+using NetBook.Core.Enums;
 
-namespace DotBook.UnitTests.Core.Entities
+namespace NetBook.UnitTests.Core.Entities
 {
     public class UserTests
     {

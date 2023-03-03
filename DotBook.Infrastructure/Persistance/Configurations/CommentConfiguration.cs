@@ -1,8 +1,8 @@
-﻿using DotBook.Core.Entities;
+﻿using NetBook.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DotBook.Infrastructure.Persistance.Configurations
+namespace NetBook.Infrastructure.Persistance.Configurations
 {
     public class CommentConfiguration : IEntityTypeConfiguration<Comment>
     {

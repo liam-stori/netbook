@@ -1,7 +1,7 @@
-﻿using DotBook.Application.ViewModels;
+﻿using NetBook.Application.ViewModels;
 using MediatR;
 
-namespace DotBook.Application.Queries.GetUserById
+namespace NetBook.Application.Queries.GetUserById
 {
     public class GetUserByIdQuery : IRequest<UserViewModel>
     {

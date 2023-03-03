@@ -1,7 +1,7 @@
-﻿using DotBook.Core.Repositories;
+﻿using NetBook.Core.Repositories;
 using MediatR;
 
-namespace DotBook.Application.Commands.DeleteComment
+namespace NetBook.Application.Commands.DeleteComment
 {
     public class DeleteCommentCommandHandler : IRequestHandler<DeleteCommentCommand, Unit>
     {

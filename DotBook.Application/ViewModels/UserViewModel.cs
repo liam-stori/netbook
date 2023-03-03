@@ -1,4 +1,4 @@
-﻿namespace DotBook.Application.ViewModels
+﻿namespace NetBook.Application.ViewModels
 {
     public class UserViewModel
     {

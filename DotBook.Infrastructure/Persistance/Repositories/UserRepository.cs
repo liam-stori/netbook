@@ -1,13 +1,13 @@
-﻿using DotBook.Core.Entities;
-using DotBook.Core.Repositories;
+﻿using NetBook.Core.Entities;
+using NetBook.Core.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotBook.Infrastructure.Persistance.Repositories
+namespace NetBook.Infrastructure.Persistance.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly DotBookDbContext _dbContext;
-        public UserRepository(DotBookDbContext dbContext)
+        private readonly NetBookDbContext _dbContext;
+        public UserRepository(NetBookDbContext dbContext)
         {
             _dbContext = dbContext;
         }

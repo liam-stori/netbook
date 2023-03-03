@@ -1,7 +1,7 @@
-﻿using DotBook.Core.Enums;
+﻿using NetBook.Core.Enums;
 using System.Collections.ObjectModel;
 
-namespace DotBook.Core.Entities
+namespace NetBook.Core.Entities
 {
     public class User : BaseEntity
     {

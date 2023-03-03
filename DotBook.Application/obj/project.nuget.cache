@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3/f08svS8UpsaIGgwxOgo5ZqiGAty1s1Bv1L/ZEuZ5K9NtdEQpdc2fH6bxrOug2FH02tP9yk4DC2MbeN8oycWw==",
+  "dgSpecHash": "quTJQETP/7odGbl78UFGuQ7C8r6cvAn7I2pXA2EvqT1HErqofQ+xWhNKXwQ67Muwbs6wL4CCeH5tbFKqH+y93A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Application\\DotBook.Application.csproj",
+  "projectFilePath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Application\\NetBook.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Liam\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

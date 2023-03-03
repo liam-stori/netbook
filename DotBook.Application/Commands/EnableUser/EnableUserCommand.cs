@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace DotBook.Application.Commands.EnableUser
+namespace NetBook.Application.Commands.EnableUser
 {
     public class EnableUserCommand : IRequest<Unit>
     {

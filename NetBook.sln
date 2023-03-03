@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotBook.API", "DotBook.API\DotBook.API.csproj", "{07D47D6F-5841-4CB4-B8F6-DCBEE0D54DA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetBook.API", "DotBook.API\NetBook.API.csproj", "{07D47D6F-5841-4CB4-B8F6-DCBEE0D54DA3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotBook.Application", "DotBook.Application\DotBook.Application.csproj", "{4F1BC96F-FE49-4C41-9C10-920FF242D023}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetBook.Application", "DotBook.Application\NetBook.Application.csproj", "{4F1BC96F-FE49-4C41-9C10-920FF242D023}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotBook.Core", "DotBook.Core\DotBook.Core.csproj", "{B4D6FEB5-0D47-4FFE-9EE2-C695373B1490}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetBook.Core", "DotBook.Core\NetBook.Core.csproj", "{B4D6FEB5-0D47-4FFE-9EE2-C695373B1490}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotBook.Infrastructure", "DotBook.Infrastructure\DotBook.Infrastructure.csproj", "{22A76ACF-4635-4544-A0ED-611D162F56E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetBook.Infrastructure", "DotBook.Infrastructure\NetBook.Infrastructure.csproj", "{22A76ACF-4635-4544-A0ED-611D162F56E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotBook.UnitTests", "DotBook.UnitTests\DotBook.UnitTests.csproj", "{AE323D6A-3986-4008-823C-D6823131BE4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetBook.UnitTests", "DotBook.UnitTests\NetBook.UnitTests.csproj", "{AE323D6A-3986-4008-823C-D6823131BE4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

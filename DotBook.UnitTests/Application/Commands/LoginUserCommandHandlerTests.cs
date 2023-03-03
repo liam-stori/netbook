@@ -1,10 +1,10 @@
-﻿using DotBook.Application.Commands.LoginUser;
-using DotBook.Application.Services;
-using DotBook.Core.Entities;
-using DotBook.Core.Repositories;
+﻿using NetBook.Application.Commands.LoginUser;
+using NetBook.Application.Services;
+using NetBook.Core.Entities;
+using NetBook.Core.Repositories;
 using Moq;
 
-namespace DotBook.UnitTests.Application.Commands
+namespace NetBook.UnitTests.Application.Commands
 {
     public class LoginUserCommandHandlerTests
     {

@@ -1,7 +1,7 @@
-﻿using DotBook.Core.Repositories;
+﻿using NetBook.Core.Repositories;
 using MediatR;
 
-namespace DotBook.Application.Commands.UpdatePublication
+namespace NetBook.Application.Commands.UpdatePublication
 {
     public class UpdatePublicationCommandHandler : IRequestHandler<UpdatePublicationCommand, Unit>
     {

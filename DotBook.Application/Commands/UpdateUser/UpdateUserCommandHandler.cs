@@ -1,7 +1,7 @@
-﻿using DotBook.Core.Repositories;
+﻿using NetBook.Core.Repositories;
 using MediatR;
 
-namespace DotBook.Application.Commands.UpdateUser
+namespace NetBook.Application.Commands.UpdateUser
 {
     public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Unit>
     {

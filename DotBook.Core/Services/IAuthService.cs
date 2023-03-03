@@ -1,4 +1,4 @@
-﻿namespace DotBook.Application.Services
+﻿namespace NetBook.Application.Services
 {
     public interface IAuthService
     {

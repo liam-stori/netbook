@@ -1,4 +1,4 @@
-﻿namespace DotBook.Core.Enums
+﻿namespace NetBook.Core.Enums
 {
     public enum PublicationStatusEnum
     {

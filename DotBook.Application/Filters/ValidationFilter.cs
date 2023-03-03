@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace DotBook.Application.Filters
+namespace NetBook.Application.Filters
 {
     public class ValidationFilter : IActionFilter
     {

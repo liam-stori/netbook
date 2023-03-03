@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace DotBook.Application.Commands.UpdateUser
+namespace NetBook.Application.Commands.UpdateUser
 {
     public class UpdateUserCommand : IRequest<Unit>
     {

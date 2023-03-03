@@ -1,8 +1,8 @@
-﻿using DotBook.Application.Commands.CreateUser;
+﻿using NetBook.Application.Commands.CreateUser;
 using FluentValidation;
 using System.Text.RegularExpressions;
 
-namespace DotBook.Application.Validators
+namespace NetBook.Application.Validators
 {
     public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
     {

@@ -1,9 +1,9 @@
-﻿using DotBook.Application.Services;
-using DotBook.Application.ViewModels;
-using DotBook.Core.Repositories;
+﻿using NetBook.Application.Services;
+using NetBook.Application.ViewModels;
+using NetBook.Core.Repositories;
 using MediatR;
 
-namespace DotBook.Application.Commands.LoginUser
+namespace NetBook.Application.Commands.LoginUser
 {
     public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, LoginUserViewModel>
     {

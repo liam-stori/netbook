@@ -1,16 +1,18 @@
-﻿using DotBook.Application.Commands.CreateUser;
-using DotBook.Application.Commands.DeleteUser;
-using DotBook.Application.Commands.EnableUser;
-using DotBook.Application.Commands.LoginUser;
-using DotBook.Application.Queries.GetUserById;
+﻿using NetBook.Application.Commands.CreateUser;
+using NetBook.Application.Commands.DeleteUser;
+using NetBook.Application.Commands.EnableUser;
+using NetBook.Application.Commands.LoginUser;
+using NetBook.Application.Commands.UpdateUser;
+using NetBook.Application.Queries.GetUserById;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace DotBook.API.Controllers
+namespace NetBook.API.Controllers
 {
     [Route("api/users")]
+    [ApiController]
     public class UsersController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -50,6 +52,15 @@ namespace DotBook.API.Controllers
             if (loginUserViewModel == null) return BadRequest();
 
             return Ok(loginUserViewModel);
+        }
+
+        [HttpPut("{id}/update")]
+        [Authorize(Roles = "Users")]
+        public async Task<IActionResult> Put(int id, [FromBody] UpdateUserCommand command)
+        {
+            await _mediator.Send(command);
+
+            return NoContent();
         }
 
         [HttpPut("{id}/disable")]

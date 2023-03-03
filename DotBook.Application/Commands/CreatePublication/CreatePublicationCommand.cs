@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace DotBook.Application.Commands.CreatePublication
+namespace NetBook.Application.Commands.CreatePublication
 {
     public class CreatePublicationCommand : IRequest<int>
     {

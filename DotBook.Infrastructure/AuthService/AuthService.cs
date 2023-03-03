@@ -1,4 +1,4 @@
-﻿using DotBook.Application.Services;
+﻿using NetBook.Application.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace DotBook.Infrastructure.AuthService
+namespace NetBook.Infrastructure.AuthService
 {
     public class AuthService : IAuthService
     {

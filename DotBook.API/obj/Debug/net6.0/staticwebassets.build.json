@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "Hash": "BOLCnRFdhnoeWQQv4WOXSLPlwAiW/NqfclHzZcIFXyo=",
-  "Source": "DotBook.API",
-  "BasePath": "_content/DotBook.API",
+  "Hash": "pluz4rntQQfi445f3XKAA4LwLOPi4M/prUR6ZcadGtY=",
+  "Source": "NetBook.API",
+  "BasePath": "_content/NetBook.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "DotBook.API\\wwwroot",
-      "Source": "DotBook.API",
-      "ContentRoot": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.API\\wwwroot\\",
-      "BasePath": "_content/DotBook.API",
+      "Name": "NetBook.API\\wwwroot",
+      "Source": "NetBook.API",
+      "ContentRoot": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.API\\wwwroot\\",
+      "BasePath": "_content/NetBook.API",
       "Pattern": "**"
     }
   ],

@@ -1,8 +1,8 @@
-﻿using DotBook.Application.ViewModels;
-using DotBook.Core.Repositories;
+﻿using NetBook.Application.ViewModels;
+using NetBook.Core.Repositories;
 using MediatR;
 
-namespace DotBook.Application.Queries.GetUserById
+namespace NetBook.Application.Queries.GetUserById
 {
     public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserViewModel>
     {

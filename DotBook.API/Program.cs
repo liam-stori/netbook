@@ -1,12 +1,12 @@
-using DotBook.Application.Commands.CreatePublication;
-using DotBook.Application.Filters;
-using DotBook.Application.Services;
-using DotBook.Application.Validators;
-using DotBook.Core.Mappings;
-using DotBook.Core.Repositories;
-using DotBook.Infrastructure.AuthService;
-using DotBook.Infrastructure.Persistance;
-using DotBook.Infrastructure.Persistance.Repositories;
+using NetBook.Application.Commands.CreatePublication;
+using NetBook.Application.Filters;
+using NetBook.Application.Services;
+using NetBook.Application.Validators;
+using NetBook.Core.Mappings;
+using NetBook.Core.Repositories;
+using NetBook.Infrastructure.AuthService;
+using NetBook.Infrastructure.Persistance;
+using NetBook.Infrastructure.Persistance.Repositories;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
@@ -24,7 +24,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 //SqlServer
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<DotBookDbContext>(
+builder.Services.AddDbContext<NetBookDbContext>(
         options => options.UseSqlServer(connection));
 
 //Repositories
@@ -53,7 +53,7 @@ builder.Services.AddMediatR(typeof(CreatePublicationCommand));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "DevFreeela.API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "NetBook.API", Version = "v1" });
 
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {

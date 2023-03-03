@@ -1,13 +1,13 @@
-﻿using DotBook.Core.Entities;
-using DotBook.Core.Repositories;
+﻿using NetBook.Core.Entities;
+using NetBook.Core.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotBook.Infrastructure.Persistance.Repositories
+namespace NetBook.Infrastructure.Persistance.Repositories
 {
     public class CommentsRepository : ICommentRepository
     {
-        private readonly DotBookDbContext _dbContext;
-        public CommentsRepository(DotBookDbContext dbContext)
+        private readonly NetBookDbContext _dbContext;
+        public CommentsRepository(NetBookDbContext dbContext)
         {
             _dbContext = dbContext;
         }

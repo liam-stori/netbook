@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {}
+    "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\DotBook.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {
+    "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\DotBook.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\DotBook.Core.csproj",
         "projectName": "DotBook.Core",
-        "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj",
+        "projectPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\DotBook.Core.csproj",
         "packagesPath": "C:\\Users\\Liam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\obj\\",
+        "outputPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Liam\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,7 +1,7 @@
-﻿using DotBook.Core.Repositories;
+﻿using NetBook.Core.Repositories;
 using MediatR;
 
-namespace DotBook.Application.Commands.EnableUser
+namespace NetBook.Application.Commands.EnableUser
 {
     public class EnableUserCommandHandler : IRequestHandler<EnableUserCommand, Unit>
     {

@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DotBook.Core\DotBook.Core.csproj" />
+    <ProjectReference Include="..\DotBook.Core\NetBook.Core.csproj" />
   </ItemGroup>
 
 </Project>

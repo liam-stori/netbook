@@ -1,7 +1,7 @@
-﻿using DotBook.Application.Commands.UpdateComment;
+﻿using NetBook.Application.Commands.UpdateComment;
 using FluentValidation;
 
-namespace DotBook.Application.Validators
+namespace NetBook.Application.Validators
 {
     public class UpdateCommentCommandValidator : AbstractValidator<UpdateCommentCommand>
     {

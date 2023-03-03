@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace DotBook.Infrastructure.Migrations
+namespace NetBook.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class initial : Migration

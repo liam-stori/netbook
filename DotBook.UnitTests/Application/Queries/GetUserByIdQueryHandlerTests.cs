@@ -1,9 +1,9 @@
-﻿using DotBook.Application.Queries.GetUserById;
-using DotBook.Core.Entities;
-using DotBook.Core.Repositories;
+﻿using NetBook.Application.Queries.GetUserById;
+using NetBook.Core.Entities;
+using NetBook.Core.Repositories;
 using Moq;
 
-namespace DotBook.UnitTests.Application.Queries
+namespace NetBook.UnitTests.Application.Queries
 {
     public class GetUserByIdQueryHandlerTests
     {

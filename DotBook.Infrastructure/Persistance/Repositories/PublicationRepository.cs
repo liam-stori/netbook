@@ -1,17 +1,17 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using DotBook.Core.DTOs;
-using DotBook.Core.Entities;
-using DotBook.Core.Repositories;
+using NetBook.Core.DTOs;
+using NetBook.Core.Entities;
+using NetBook.Core.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotBook.Infrastructure.Persistance.Repositories
+namespace NetBook.Infrastructure.Persistance.Repositories
 {
     public class PublicationRepository : IPublicationRepository
     {
-        private readonly DotBookDbContext _dbContext;
+        private readonly NetBookDbContext _dbContext;
         private readonly IMapper _mapper;
-        public PublicationRepository(DotBookDbContext dbContext, IMapper mapper)
+        public PublicationRepository(NetBookDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;

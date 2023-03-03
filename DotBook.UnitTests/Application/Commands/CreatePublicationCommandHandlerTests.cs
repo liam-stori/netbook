@@ -1,10 +1,10 @@
-﻿using DotBook.Application.Commands.CreatePublication;
-using DotBook.Application.Validators;
-using DotBook.Core.Entities;
-using DotBook.Core.Repositories;
+﻿using NetBook.Application.Commands.CreatePublication;
+using NetBook.Application.Validators;
+using NetBook.Core.Entities;
+using NetBook.Core.Repositories;
 using Moq;
 
-namespace DotBook.UnitTests.Application.Commands
+namespace NetBook.UnitTests.Application.Commands
 {
     public class CreatePublicationCommandHandlerTests
     {

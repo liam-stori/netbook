@@ -1,10 +1,10 @@
-﻿using DotBook.Application.Queries.GetAllPublication;
-using DotBook.Core.DTOs;
-using DotBook.Core.Entities;
-using DotBook.Core.Repositories;
+﻿using NetBook.Application.Queries.GetAllPublication;
+using NetBook.Core.DTOs;
+using NetBook.Core.Entities;
+using NetBook.Core.Repositories;
 using Moq;
 
-namespace DotBook.UnitTests.Application.Queries
+namespace NetBook.UnitTests.Application.Queries
 {
     public class GetAllPublicationByUserQueryHandlerTests
     {

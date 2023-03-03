@@ -1,7 +1,7 @@
-﻿using DotBook.Core.Repositories;
+﻿using NetBook.Core.Repositories;
 using MediatR;
 
-namespace DotBook.Application.Commands.DeleteUser
+namespace NetBook.Application.Commands.DeleteUser
 {
     public class DisableUserCommandHandler : IRequestHandler<DisableUserCommand, Unit>
     {

@@ -1,7 +1,7 @@
-﻿using DotBook.Application.Commands.CreatePublication;
+﻿using NetBook.Application.Commands.CreatePublication;
 using FluentValidation;
 
-namespace DotBook.Application.Validators
+namespace NetBook.Application.Validators
 {
     public class CreatePublicationCommandValidator : AbstractValidator<CreatePublicationCommand>
     {

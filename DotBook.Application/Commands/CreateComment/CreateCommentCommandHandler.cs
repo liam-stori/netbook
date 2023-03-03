@@ -1,8 +1,8 @@
-﻿using DotBook.Core.Entities;
-using DotBook.Core.Repositories;
+﻿using NetBook.Core.Entities;
+using NetBook.Core.Repositories;
 using MediatR;
 
-namespace DotBook.Application.Commands.CreateComment
+namespace NetBook.Application.Commands.CreateComment
 {
     public class CreateCommentCommandHandler : IRequestHandler<CreateCommentCommand, Unit>
     {

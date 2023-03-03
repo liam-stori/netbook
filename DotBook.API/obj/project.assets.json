@@ -1390,48 +1390,48 @@
           }
         }
       },
-      "DotBook.Application/1.0.0": {
+      "NetBook.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
-          "DotBook.Core": "1.0.0",
-          "DotBook.Infrastructure": "1.0.0",
           "FluentValidation.AspNetCore": "11.2.2",
           "MediatR": "11.1.0",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
+          "NetBook.Core": "1.0.0",
+          "NetBook.Infrastructure": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/DotBook.Application.dll": {}
+          "bin/placeholder/NetBook.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DotBook.Application.dll": {}
+          "bin/placeholder/NetBook.Application.dll": {}
         }
       },
-      "DotBook.Core/1.0.0": {
+      "NetBook.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/DotBook.Core.dll": {}
+          "bin/placeholder/NetBook.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DotBook.Core.dll": {}
+          "bin/placeholder/NetBook.Core.dll": {}
         }
       },
-      "DotBook.Infrastructure/1.0.0": {
+      "NetBook.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
-          "DotBook.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.3",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
+          "NetBook.Core": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/DotBook.Infrastructure.dll": {}
+          "bin/placeholder/NetBook.Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DotBook.Infrastructure.dll": {}
+          "bin/placeholder/NetBook.Infrastructure.dll": {}
         }
       }
     }
@@ -4252,33 +4252,33 @@
         "version.txt"
       ]
     },
-    "DotBook.Application/1.0.0": {
+    "NetBook.Application/1.0.0": {
       "type": "project",
-      "path": "../DotBook.Application/DotBook.Application.csproj",
-      "msbuildProject": "../DotBook.Application/DotBook.Application.csproj"
+      "path": "../DotBook.Application/NetBook.Application.csproj",
+      "msbuildProject": "../DotBook.Application/NetBook.Application.csproj"
     },
-    "DotBook.Core/1.0.0": {
+    "NetBook.Core/1.0.0": {
       "type": "project",
-      "path": "../DotBook.Core/DotBook.Core.csproj",
-      "msbuildProject": "../DotBook.Core/DotBook.Core.csproj"
+      "path": "../DotBook.Core/NetBook.Core.csproj",
+      "msbuildProject": "../DotBook.Core/NetBook.Core.csproj"
     },
-    "DotBook.Infrastructure/1.0.0": {
+    "NetBook.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../DotBook.Infrastructure/DotBook.Infrastructure.csproj",
-      "msbuildProject": "../DotBook.Infrastructure/DotBook.Infrastructure.csproj"
+      "path": "../DotBook.Infrastructure/NetBook.Infrastructure.csproj",
+      "msbuildProject": "../DotBook.Infrastructure/NetBook.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
-      "DotBook.Application >= 1.0.0",
-      "DotBook.Core >= 1.0.0",
-      "DotBook.Infrastructure >= 1.0.0",
       "MediatR >= 11.1.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.1.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.14",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 6.0.14",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.3",
+      "NetBook.Application >= 1.0.0",
+      "NetBook.Core >= 1.0.0",
+      "NetBook.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -4288,11 +4288,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.API\\DotBook.API.csproj",
-      "projectName": "DotBook.API",
-      "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.API\\DotBook.API.csproj",
+      "projectUniqueName": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.API\\NetBook.API.csproj",
+      "projectName": "NetBook.API",
+      "projectPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.API\\NetBook.API.csproj",
       "packagesPath": "C:\\Users\\Liam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.API\\obj\\",
+      "outputPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Liam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4309,14 +4309,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Application\\DotBook.Application.csproj": {
-              "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Application\\DotBook.Application.csproj"
+            "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Application\\NetBook.Application.csproj": {
+              "projectPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Application\\NetBook.Application.csproj"
             },
-            "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj": {
-              "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj"
+            "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\NetBook.Core.csproj": {
+              "projectPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\NetBook.Core.csproj"
             },
-            "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Infrastructure\\DotBook.Infrastructure.csproj"
+            "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Infrastructure\\NetBook.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Infrastructure\\NetBook.Infrastructure.csproj"
             }
           }
         }

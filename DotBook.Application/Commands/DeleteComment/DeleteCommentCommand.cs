@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace DotBook.Application.Commands.DeleteComment
+namespace NetBook.Application.Commands.DeleteComment
 {
     public class DeleteCommentCommand : IRequest<Unit>
     {

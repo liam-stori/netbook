@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GN2qLNcUqY/2zSOwOjl5mwp11+LuxvtPKgjk/GP1NIcVpfp92qcQ07ToFFZ7fjkmPW8e7qIen4yqcTo2blBLmw==",
+  "dgSpecHash": "+vk0/Fxuh6YbgpQGMX4FEGW036/QmhTiBMrX0UY6VkDZ36ry1MaSVb27AaQFSFAd9tURhzlSoBiSwgcOPgYZog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Liam\\Desktop\\DotBook\\DotBook.Core\\DotBook.Core.csproj",
+  "projectFilePath": "C:\\Users\\Liam\\Desktop\\NetBook\\netbook\\DotBook.Core\\NetBook.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

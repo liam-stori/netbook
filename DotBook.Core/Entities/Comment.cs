@@ -1,6 +1,6 @@
-﻿using DotBook.Core.Enums;
+﻿using NetBook.Core.Enums;
 
-namespace DotBook.Core.Entities
+namespace NetBook.Core.Entities
 {
     public class Comment : BaseEntity
     {

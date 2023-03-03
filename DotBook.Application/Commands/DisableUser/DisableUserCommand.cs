@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace DotBook.Application.Commands.DeleteUser
+namespace NetBook.Application.Commands.DeleteUser
 {
     public class DisableUserCommand : IRequest<Unit>
     {

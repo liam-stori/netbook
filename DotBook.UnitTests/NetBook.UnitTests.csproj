@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DotBook.Application\DotBook.Application.csproj" />
-    <ProjectReference Include="..\DotBook.Core\DotBook.Core.csproj" />
+    <ProjectReference Include="..\DotBook.Application\NetBook.Application.csproj" />
+    <ProjectReference Include="..\DotBook.Core\NetBook.Core.csproj" />
   </ItemGroup>
 
 </Project>

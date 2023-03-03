@@ -1,13 +1,15 @@
-﻿using DotBook.Application.Commands.CreateComment;
-using DotBook.Application.Commands.DeleteComment;
+﻿using NetBook.Application.Commands.CreateComment;
+using NetBook.Application.Commands.DeleteComment;
+using NetBook.Application.Commands.UpdateComment;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace DotBook.API.Controllers
+namespace NetBook.API.Controllers
 {
     [Route("api/comments")]
+    [ApiController]
     public class CommentsController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -18,7 +20,16 @@ namespace DotBook.API.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Users")]
-        public async Task<IActionResult> PostComment([FromBody] CreateCommentCommand command)
+        public async Task<IActionResult> Post([FromBody] CreateCommentCommand command)
+        {
+            await _mediator.Send(command);
+
+            return NoContent();
+        }
+
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Users")]
+        public async Task<IActionResult> Put(int id, [FromBody] UpdateCommentCommand command)
         {
             await _mediator.Send(command);
 
@@ -27,7 +38,7 @@ namespace DotBook.API.Controllers
 
         [HttpDelete("{id}/publication")]
         [Authorize(Roles = "Users")]
-        public async Task<IActionResult> DeleteComment(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             var command = new DeleteCommentCommand(id);
 

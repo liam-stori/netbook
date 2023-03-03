@@ -1,9 +1,9 @@
-﻿using DotBook.Application.Services;
-using DotBook.Core.Entities;
-using DotBook.Core.Repositories;
+﻿using NetBook.Application.Services;
+using NetBook.Core.Entities;
+using NetBook.Core.Repositories;
 using MediatR;
 
-namespace DotBook.Application.Commands.CreateUser
+namespace NetBook.Application.Commands.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, int>
     {

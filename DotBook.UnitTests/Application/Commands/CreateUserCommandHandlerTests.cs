@@ -1,11 +1,11 @@
-﻿using DotBook.Application.Commands.CreateUser;
-using DotBook.Application.Services;
-using DotBook.Application.Validators;
-using DotBook.Core.Entities;
-using DotBook.Core.Repositories;
+﻿using NetBook.Application.Commands.CreateUser;
+using NetBook.Application.Services;
+using NetBook.Application.Validators;
+using NetBook.Core.Entities;
+using NetBook.Core.Repositories;
 using Moq;
 
-namespace DotBook.UnitTests.Application.Commands
+namespace NetBook.UnitTests.Application.Commands
 {
     public class CreateUserCommandHandlerTests
     {

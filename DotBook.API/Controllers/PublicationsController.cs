@@ -1,23 +1,23 @@
 ﻿using AutoMapper;
-using DotBook.Application.Commands.CreatePublication;
-using DotBook.Application.Commands.DeletePublication;
-using DotBook.Application.Queries.GetAllPublication;
+using NetBook.Application.Commands.CreatePublication;
+using NetBook.Application.Commands.DeletePublication;
+using NetBook.Application.Commands.UpdatePublication;
+using NetBook.Application.Queries.GetAllPublication;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace DotBook.API.Controllers
+namespace NetBook.API.Controllers
 {
     [Route("api/publications")]
+    [ApiController]
     public class PublicationsController : ControllerBase
     {
         private readonly IMediator _mediator;
-        private readonly IMapper _mapper;
-        public PublicationsController(IMediator mediator, IMapper mapper)
+        public PublicationsController(IMediator mediator)
         {
             _mediator = mediator;
-            _mapper = mapper;
         }
 
         [HttpGet]
@@ -53,6 +53,15 @@ namespace DotBook.API.Controllers
             var id = await _mediator.Send(command);
 
             return CreatedAtAction(nameof(GetByUserId), new { userId = id }, command);
+        }
+
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Users")]
+        public async Task<IActionResult> Put(int id, [FromBody] UpdatePublicationCommand command)
+        {
+            await _mediator.Send(command);
+
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
